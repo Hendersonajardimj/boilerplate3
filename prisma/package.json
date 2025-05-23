@@ -1,0 +1,19 @@
+{
+  "name": "prisma",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "migrate": "prisma migrate dev",
+    "generate": "prisma generate",
+    "seed": "ts-node seed.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.10.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.19",
+    "prisma": "^5.10.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
