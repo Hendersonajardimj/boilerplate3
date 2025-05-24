@@ -16,7 +16,7 @@
     "test": "vitest run apps/api",
     "test:api": "vitest run apps/api",
     "test:web": "vitest run apps/web",
-    "lint": "eslint . --ext .ts,.tsx --max-warnings 0",
+    "lint": "ESLINT_USE_FLAT_CONFIG=false eslint . --ext .ts,.tsx --max-warnings 0",
     "format": "prettier --write \"**/*.{ts,tsx,json,md}\""
   },
   "devDependencies": {
