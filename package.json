@@ -1,0 +1,35 @@
+{
+  "name": "my-ts-vite-express-prisma",
+  "private": true,
+  "version": "0.0.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "prisma"
+  ],
+  "scripts": {
+    "dev": "pnpm --parallel -r dev",
+    "build": "pnpm --parallel -r build",
+    "start": "pnpm --filter api start",
+    "migrate": "pnpm --filter prisma migrate",
+    "generate": "pnpm --filter prisma generate",
+    "test": "vitest run apps/api",
+    "test:api": "vitest run apps/api",
+    "test:web": "vitest run apps/web",
+    "lint": "eslint . --ext .ts,.tsx",
+    "format": "prettier --write \"**/*.{ts,tsx,json,md}\""
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.4.2",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.33.2",
+    "husky": "^9.0.11",
+    "prettier": "^3.2.5",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.2"
+  }
+}
